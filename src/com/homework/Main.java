@@ -37,7 +37,8 @@ public class Main {
             for (String line = br.readLine(); line != null; line = br.readLine()) {
                 Applicant applicant = Applicant.fromString(line);
                 if (applicant == null) {
-                    System.err.println("Malformed string in file " + args[0]);
+                    System.err.println("Malformed string in file " + args[0] + ":");
+                    System.err.println(line);
                     return;
                 } else commission.addApplicant(applicant);
             }
